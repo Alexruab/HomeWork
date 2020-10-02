@@ -5,7 +5,7 @@ double n, Sn, i;
 
 int main()
 {
-	scanf("%lf", &n);
+	scanf_s("%Lf", &n);
 
 	Sn = 1;
 
