@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+
+double Xsquare, Ysquare, Xcircle, Ycircle, radius, sidesquare, Xcenter, Ycenter, diagonal;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+
+	printf("Введите координаты x и y для квадрата \n");
+	scanf_s("%lf %lf", &Xsquare, &Ysquare);
+	printf("Введите длину стороны квадрата \n"); 
+	scanf_s("%lf", sidesquare);
+
+	printf("Введите координаты x и y для окружности \n");
+	scanf_s("%lf %lf", Xcircle, Ycircle);
+	printf("Введите радиус окружности \n");
+	scanf_s("%lf", radius);
+
+	Xcenter = Xsquare + (sidesquare / 2);
+	Ycenter = Ysquare + (sidesquare / 2);
+
+	diagonal = sqrt((sidesquare / 2) * (sidesquare / 2) * 2);
+
+		if ((Xcircle == Xcenter) & (Ycircle == Ycenter))
+	{
+		if (radius == (sidesquare / 2))
+		{
+			printf("окружность вписана в квадрат");
+        }
+		else
+		{
+			if (radius < (sidesquare / 2))
+			{
+				printf("окружность лежит внутри квадрат");
+			}
+			else
+			{
+				if ((radius > (sidesquare / 2)) && (radius < diagonal))
+				{
+					printf("окружность пересекается с квадратом");
+                }
+				else
+				{
+					if (radius == diagonal)
+					{
+						printf("квадрат вписан в окружность");
+					}
+					else
+					{
+						printf("квадрат лежит внутри окружности");  
+					}
+				}
+			}
+		}
+	}
+	else
+	{
+			if ((Xcircle <= Xsquare + sidesquare) && (Ycircle <= Ysquare + sidesquare))
+			{
+				if (radius < (sidesquare / 2))
+				{
+					if()
+				}
+			}
+			else
+			{
+				if (Xcircle < Xsquare)
+				{
+					if (Ysquare < Ycircle)
+					{
+						printf("круг лежит в левом нижнем углу");
+
+					}
+				}
+
+			}
+	}
+
+
+
+
+	
+
+    return 0;
+}
